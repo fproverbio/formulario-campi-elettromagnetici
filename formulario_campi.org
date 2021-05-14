@@ -1,0 +1,1432 @@
+#+title:formulario di Campi Elettromagnetici
+* Riguardo al formulario
+  :PROPERTIES:
+  :CUSTOM_ID: riguardo-al-formulario
+  :END:
+
+Quest'opera è distribuita con Licenza Creative Commons - Attribuzione
+Non commerciale 4.0 Internazionale.
+
+* Richiami di base
+  :PROPERTIES:
+  :CUSTOM_ID: richiami-di-base
+  :END:
+
+** Trigonometria
+   :PROPERTIES:
+   :CUSTOM_ID: trigonometria
+   :END:
+
+- Teorema di Carnot $a^2 = b^2 + c^2 - 2bc\cos(\alpha)$ con $\alpha$
+  angolo compreso tra $b$ e $c$
+
+- Formule di duplicazione
+
+  - Seno \[\sin(2x) = 2 \sin(x) \cos(x)$,
+    $sin^2(x) = \dfrac{1 - \cos(2x)}{2}$
+
+  - Coseno \[\cos(2x) = 1 - 2 \sin^2(x) = 2 \cos^2(x) - 1$,
+    $cos^2(x) = \dfrac{1 + \cos(2x)}{2}$
+
+- Formule di addizione
+
+  - Seno
+    \[\sin(\alpha \pm \beta ) = \sin(\alpha)\cos(\beta) \pm \cos(\alpha)\sin(\beta)\]
+
+  - Coseno
+    \[\cos(\alpha \pm \beta ) = \cos(\alpha)\cos(\beta) \mp \sin(\alpha)\sin(\beta)\]
+
+  - Tangente
+    \[\tan(\alpha \pm \beta ) = \dfrac{\tan(\alpha) \pm \tan(\beta)}{1 \mp \tan(\alpha) \tan(\beta)}\]
+
+- Formule di Werner
+
+  - \[\sin(\alpha) \sin(\beta) = \dfrac{1}{2} \left[ \cos(\alpha - \beta) - \cos(\alpha + \beta) \right]\]
+
+  - \[\cos(\alpha) \cos(\beta) = \dfrac{1}{2} \left[ \cos(\alpha + \beta) + \cos(\alpha - \beta) \right]\]
+
+  - \[\sin(\alpha) \cos(\beta) = \dfrac{1}{2} \left[ \sin(\alpha + \beta) + \sin(\alpha - \beta) \right]\]
+
+- Formule di bisezione
+
+  - Seno
+    \[\sin\left( \dfrac{x}{2} \right) = \sqrt{\dfrac{1 - \cos(x)}{2}\]
+
+  - Coseno
+    \[\cos\left( \dfrac{x}{2} \right) = \sqrt{\dfrac{1 + \cos(x)}{2}\]
+
+  - Tangente
+    \[\tan\left( \dfrac{x}{2} \right) = \sqrt{\dfrac{1 - \cos(x)}{1 + \cos(x)}} = \dfrac{1 - \cos(x)}{\sin(x)} = \dfrac{\sin(x)}{1 + \cos(x)}\]
+
+- Formula di Eulero
+
+  - Seno \[\sin(x) = \dfrac{e^{ix} + e^{-ix}}{2i}\]
+
+  - Coseno \[\cos(x) = \dfrac{e^{ix} - e^{-ix}}{2}\]
+
+- Approssimazioni (Taylor)
+
+  - *Ipotesi:* \[\theta \rightarrow 0$
+
+  - Seno \[\sin(\theta) \approx \thet\]
+
+  - Coseno \[\cos(\theta) \approx 1 - \dfrac{\theta^2}{2}\]
+
+  - Tangente \[\tan(\theta) \approx \thet\]
+
+** Numeri complessi
+   :PROPERTIES:
+   :CUSTOM_ID: numeri-complessi
+   :END:
+
+- Radice quadrata di numeri complessi $z \in \mathbb{C}$,\\
+  $z = \alpha + j \beta = r e^{j \theta} \rightarrow \sqrt{z} = \sqrt[n]{z} \left( \cos{\dfrac{\theta + 2k\pi}{n}} + j \sin{\dfrac{\theta + 2 k \pi}{n}} \right)$
+  con $k \in \{0, 1, \cdots, n-1 \}$
+
+- Parte reale di un numero complesso $x \in \mathbb{C}$,
+  $Re[x] = \dfrac{x + x^{*}}{2}$
+
+- Inverso della parte reale: siano $z = \alpha + j \beta$,
+  $y = \dfrac{1}{z} \rightarrow \operatorname{Re}(y) \neq \dfrac{1}{\alpha}$,
+  $\operatorname{Re}(y)  = \dfrac{\alpha}{\alpha^2 + \beta^2}$
+
+- Somma dei moduli: siano
+  $z_1, z_2 \in \mathbb{Z} \rightarrow |z_1 + z_2| \neq |z_1| + |z_2|$
+
+** Numeri complessi con una calcolatrice Casio
+   :PROPERTIES:
+   :CUSTOM_ID: numeri-complessi-con-una-calcolatrice-casio
+   :END:
+
+*Assicurarsi di essere in modalità /COMPLEX/ prima di eseguire tutti
+questi calcoli.*
+
+*** Calcolo delle radici
+    :PROPERTIES:
+    :CUSTOM_ID: calcolo-delle-radici
+    :END:
+
+Il calcolo di una espressione del tipo $\sqrt{a+bi}$ darà origine ad un
+/MATH ERROR/.
+
+- Radice quadrata
+  $\displaystyle \sqrt{ \textnormal{Abs} \left( \textnormal{ANS} \right) } \angle \left( \textnormal{arg} \left( \textnormal{ANS} \right) \div 2 \right)$
+
+- Radice cubica
+  $\displaystyle \sqrt[3]{ \textnormal{Abs} \left( \textnormal{ANS} \right) } \angle \left( \textnormal{arg} \left( \textnormal{ANS} \right) \div 3 \right)$
+
+- Radice N-esima
+  $\left( \textnormal{Abs} \left( \textnormal{ANS} \right) \right) ^ {\sfrac{1}{N}} \angle \left(\textnormal{arg} \left( \textnormal{ANS} \right) \div N \right)$
+
+*** Conversione da forma cartesiana a forma polare
+    :PROPERTIES:
+    :CUSTOM_ID: conversione-da-forma-cartesiana-a-forma-polare
+    :END:
+
+.
+
+1. Scrivere il numero in forma cartesiana (ossia $a + ib$)
+
+2. Premere $=$
+
+3. Premere
+   $\textnormal{shift} + \textnormal{option} \rightarrow freccia giu \rightarrow 1 \rightarrow =$
+
+*** Conversione da forma polare a forma cartesiana
+    :PROPERTIES:
+    :CUSTOM_ID: conversione-da-forma-polare-a-forma-cartesiana
+    :END:
+
+1. Scrivere il numero in forma cartesiana (ossia $\rho \angle \theta$)
+
+2. Premere $=$
+
+3. Premere
+   $\textnormal{shift} + \textnormal{option} \rightarrow freccia giu \rightarrow 2 \rightarrow =$
+
+** Decibel e Neper
+   :PROPERTIES:
+   :CUSTOM_ID: decibel-e-neper
+   :END:
+
+- Decibel
+
+  - Adimensionali
+
+    - Ampiezza, tensione, campo, ...
+      $x_{dB} = 20 \log\left(\dfrac{x}{x_0}\right)$
+
+    - Potenza, densità di potenza, ...
+      $x_{dB} = 10 \log\left(\dfrac{x}{x_0}\right)$
+
+    - $x_0$ è un valore di riferimento
+
+  - Potenza
+
+    - $1 dBw = 10 \log\left(\dfrac{P}{1w}\right)$
+
+    - $1 dBm = 10 \log\left(\dfrac{P}{1mw}\right)$
+
+  - Ampiezza
+
+    - $1 dBV = 20 \log\left(\dfrac{P}{1V}\right)$
+
+    - $1 dB \mu V = 20 \log\left(\dfrac{P}{1 \mu V}\right)$
+
+  - Rumore
+
+    - $P_S - P_C = 10 \log\left( \dfrac{S}{C} \right)$
+
+    - $S$ segnale di rumore, $C$ onda portante (carrier), $P_S$ e $P_C)$
+      le loro rispettive potenze
+
+- Neper: si usa il logaritmo naturale ($\ln$) al posto del logaritmo in
+  base 10 ($\log$).
+
+- Conversione
+
+  - Neper $\rightarrow$ Decibel
+    $\; \alpha_{dB} = \alpha_{Np} \cdot 8.686$
+
+  - Decibel $\rightarrow$ Neper
+    $\; \alpha_{Np} = \dfrac{\alpha_{dB}}{8.686}$
+
+** Teoremi fondamentali
+   :PROPERTIES:
+   :CUSTOM_ID: teoremi-fondamentali
+   :END:
+
+- Teorema di Stokes (rotore)
+
+  - Si applica a campi vettoriali su una linea chiusa orientabile ed
+    orientata in modo coerente alla normale della superficie tramite
+    regola della mano destra
+
+  - $\displaystyle \oint_s \vec{F} \times d\vec{l} = \iint_\Omega \nabla \cdot \vec{F} d\Omega$
+
+- Teorema di Gauss (divergenza)
+
+  - Si applica ad un campo vettoriale su una superficie chiusa semplice
+    ed orientata con bordo regolare $\Omega$
+
+  - $\displaystyle \iiint_V \nabla \cdot \vec{F} d\Omega = \iint_\Omega \vec{F} \cdot d\vec{S} = \iint_\Omega \left( \vec{F} \cdot \vec{n} \right) dS$
+
+** Sistemi di coordinate
+   :PROPERTIES:
+   :CUSTOM_ID: sistemi-di-coordinate
+   :END:
+
+- Coordinate cartesiane
+
+  - Elemento di spostamento infinitesimo
+    $dl = dx \vec{u_x} + dy \vec{u_y} + dz \vec{u_z}$
+
+  - Elemento di volume $dV = dx dy dz$
+
+- Coordinate cilindriche
+
+  - Elemento di spostamento infinitesimo
+    $dl = d\rho \vec{u_\rho} + \rho d\phi \vec{u_\phi} + dz \vec{u_z}$
+
+  - Elemento di volume $dV = \rho d\rho d\phi d_z$
+
+- Coordinate polari
+
+  - Elemento di spostamento infinitesimo
+    $dl = dr \vec{u_r} + R d\theta \vec{u_\theta} + R \sin\left(\theta\right) d\phi \vec{u_\phi}$
+
+  - Elemento di volume
+    $dV = R^2 \sin\left(\theta\right) d\theta d\phi dR$
+
+** Operatori differenziali
+   :PROPERTIES:
+   :CUSTOM_ID: operatori-differenziali
+   :END:
+
+- Gradiente
+
+  - campo scalare $\rightarrow$ campo vettoriale
+
+  - $\nabla \, F(x, y, z) = \dfrac{\partial F}{\partial x} \vec{u_x} +  \dfrac{\partial F}{\partial y} \vec{u_y} + \dfrac{\partial F}{\partial z} \vec{u_z}$
+
+- Divergenza
+
+  - campo vettoriale $\rightarrow$ campo scalare
+
+  - $\nabla \cdot \vec{F}(x, y, z) = \dfrac{\partial F_x}{\partial x} +  \dfrac{\partial F_y}{\partial y} + \dfrac{\partial F_x}{\partial z}$
+
+- Rotore
+
+  - campo vettoriale $\rightarrow$ campo vettoriale
+
+  - $\nabla \times \vec{F} = \left( \dfrac{\partial F_z}{\partial y} -  \dfrac{\partial F_y}{\partial z} \right) \vec{u_x} + \left( \dfrac{\partial F_c}{\partial z} -  \dfrac{\partial F_z}{\partial x} \right) \vec{u_y} + \left( \dfrac{\partial F_y}{\partial x} -  \dfrac{\partial F_x}{\partial y} \right) \vec{u_z}$
+
+** Equazioni di Maxwell nel vuoto
+   :PROPERTIES:
+   :CUSTOM_ID: equazioni-di-maxwell-nel-vuoto
+   :END:
+
+1. Legge di Gauss elettrica
+   $\nabla \cdot \vec{E} = \dfrac{\rho}{\epsilon_0}$
+
+2. Legge di Gauss magnetica $\nabla \cdot \vec{B} = 0$
+
+3. Legge di Faraday
+   $\nabla \times \vec{E} = - \dfrac{\partial \vec{B}}{\partial t}$
+
+4. Legge di Ampere-Maxwell
+   $\nabla \times \vec{B} = \mu_0 \vec{J} + \mu_0 \epsilon_0 \dfrac{\partial \vec{E}}{\partial t}$
+
+* Metodo delle cariche immagine
+  :PROPERTIES:
+  :CUSTOM_ID: metodo-delle-cariche-immagine
+  :END:
+
+Il vantaggio di questo metodo è la semplicità della sua applicazione
+rispetto alla più analiticamente dispendiosa sovrapposizione degli
+effetti. Per calcolare il campo elettrico di una carica (o più) in un
+punto del piano, in presenza di un conduttore, si dovrà
+
+1. Chiudere la superficie piana del conduttore all'infinito includendo
+   il semispazio comprendente la carica sorgente. Sulla superficie che
+   racchiude questa regione di spazio, il potenziale sarà nullo.
+
+2. Si considera una o più cariche simmetriche (rispetto al conduttore)
+   alla carica in esame.
+
+3. Si calcola il potenziale in un generico punto $P$.
+
+4. Si impongono le condizioni al contorno. /(ad es. il potenziale sarà
+   nullo sulla superficie del conduttore)/
+
+5. Si calcola il campo elettrico applicando /il teorema di Gauss./
+
+Grazie al /teorema dell'unicità della soluzione/, è possibile affermare
+che la soluzione al problema elettrostatico sarà valida all'interno
+della superficie di spazio considerata.
+
+** Caso particolare: sfera conduttrice e carica a distanza
+   :PROPERTIES:
+   :CUSTOM_ID: caso-particolare-sfera-conduttrice-e-carica-a-distanza
+   :END:
+
+*Ipotesi:* la sfera ha raggio $R$, la carica è disposta a distanza $d$
+ed ha valore $q$.
+
+Prima di tutto bisogna introdurre, all'interno della sfera, una carica
+$Q'  = -\dfrac{R}{d} \cdot q$ a distanza $D = \dfrac{R^2}{d}$ dal centro
+della circonferenza. *Questo passo è sufficiente se la sfera ha
+potenziale mantenuto costante e nullo ($V=0$).*
+
+Se così non fosse, si distinguono 2 diversi scenari:
+
+1. Sfera mantenuta a potenziale fisso $V_0$:
+
+   - Bisogna considerare, al centro della sfera, una nuova carica
+     $Q^{'}$ che faccia assumere tale potenziale alla stessa.
+
+   - Il valore della nuova carica sarà quindi
+     $Q^{'} = 4 \pi \epsilon R V_0$
+
+2. Sfera isolata con carica iniziale $Q_0$:
+
+   - Bisogna considerare una carica ulteriore /(rispetto al caso della
+     sfera mantenuta a potenziale fisso $V_0$)/ $Q_0$ al centro della
+     sfera che neutralizzi il valore di $Q^{'}$.
+
+   - Il la sfera assumerà un valore di tensione
+     $V = \dfrac{Q_0 - Q^{'}}{4 \pi \epsilon R}$
+
+Nel caso si voglia calcolare la densità superficiale di carica sulla
+sfera, la formula per ricavarla è:
+$$\sigma(R, \theta) = \dfrac{q}{4 \pi R} \cdot \dfrac{R^2 - d^2}{\left(R^2 + d^2 - 2dR\cos\theta\right) ^ {\sfrac{3}{2}}}$$
+Con $R$ raggio della sfera e $\theta$ angolo formato tra l'asse
+orizzontale e il segmento che congiunge il centro della sfera alla sua
+superficie.
+
+*IMPORTANTE* il /Riva-Gentili/, nell'/appendice A/ (/pag./ $193$)
+calcola in modo errato i valori di $Q^{''}$ e di $V$ negli scenari sopra
+indicati. Al denominatore, $R$ ha esponente $2$ anziché $1$.
+
+* Elettrostatica
+  :PROPERTIES:
+  :CUSTOM_ID: elettrostatica
+  :END:
+
+- Legge di Coulomb
+  $\vec{F} = \dfrac{Qq}{4 \pi \epsilon_0 R^2} \vec{a_r} = \dfrac{Qq}{4 \pi \epsilon_0} \cdot \dfrac{(\vec{R_q} - \vec{R_p})}{| \vec{R_q} - \vec{R_p} | ^3 }$
+
+- Legge di Gauss
+  $\nabla \cdot \vec{D} = \rho_\Omega \leftrightarrow \nabla \cdot \vec{E} = \dfrac{\rho_\Omega}{\epsilon}$
+
+** Campo Elettrico
+   :PROPERTIES:
+   :CUSTOM_ID: campo-elettrico
+   :END:
+
+- Campo $\vec{E}$ in presenza di cariche puntiformi
+  $\vec{E} = \dfrac{Q}{4 \pi \epsilon_0} \cdot \dfrac{(\vec{R_q} - \vec{R_p})}{| \vec{R_q} - \vec{R_p} | ^3 } = \dfrac{Q}{4 \pi \epsilon_0} \cdot \dfrac{1}{R^2} \vec{a_r}$
+
+- Densità di flusso elettrico $\vec{D} = \epsilon_0 \vec{E}$,
+  $\vec{E} = \dfrac{Q}{4 \pi} \cdot \dfrac{(\vec{R_q} - \vec{R_p})}{| \vec{R_q} - \vec{R_p} | ^3 } = \dfrac{Q}{4 \pi} \cdot \dfrac{1}{R^2} \vec{a_r}$
+
+- Densità superficiale di carica $\sigma = D_n = \epsilon E_n$6t
+
+- Momento di dipolo elettrico $\vec{p} = Q \vec{d}$
+
+- Potenziale elettrostatico
+  $\displaystyle dV = -\vec{E} \cdot \vec{dl} \Rightarrow V = -\int{\vec{E} \cdot \vec{dl}}$
+
+- Relazioni tra $\vec{D}$ ed $\vec{e}$
+  $\nabla \cdot (\epsilon_0 \vec{E} + \vec{P} ) = \rho_\Omega$,
+  $\vec{D} = \epsilon_0 \vec{E} + \vec{P}$
+
+- All'interno di mezzi lineari $\vec{P} = \epsilon_0 \chi \vec{E}$ con
+  $\chi$ detta suscettività elettrica, $\chi \geq  0$
+
+- Relazione tra $\epsilon$ e $\chi$
+  $\epsilon = (1 + \chi_e) \epsilon_0 = \epsilon_0 \epsilon_r \rightarrow \epsilon_r = 1 + \chi_e \rightarrow \vec{D} = \epsilon \vec{E} = \epsilon_0 \epsilon_r \vec{E} = \epsilon_0 (1 + \chi_e) \vec{E} = \epsilon_0 \vec{E} + \vec{P}$
+
+- Relazione tra $\vec{P}$, $\vec{D}$,$\vec{E}$ nei mezzi isotropi
+  $\vec{P}\|\vec{D}\|\vec{E}$
+
+- Energia del sistema
+  $\displaystyle W_e = \dfrac{1}{2} \sum\limits_{i=1}^{n}Q_iV_i = \dfrac{1}{2} \int\limits_\Omega \rho_\Omega V d\Omega = \dfrac{1}{2} \int\limits_{s} \vec{D} \cdot \vec{E} d\Omega = \dfrac{1}{2} \int\limits_{s} \epsilon |\vec{E}|^2 d\Omega$
+
+- Densità di energia
+  $w_e = \dfrac{1}{2} \vec{D} \cdot \vec{E} = \dfrac{1}{2} \epsilon |\vec{E}|^2$
+
+*** Interfaccia tra due mezzi
+    :PROPERTIES:
+    :CUSTOM_ID: interfaccia-tra-due-mezzi
+    :END:
+
+- *conduttori* (componente tangenziale) $E_{1t} = E_{2t}$,
+  $\vec{a_n} \times (\vec{E_2} - \vec{E_1}) = 0$,
+  $\dfrac{\vec{D_{1t}}}{\vec{D_{2t}}} = \dfrac{\epsilon_1}{\epsilon_2}$
+
+- *conduttori* (componente normale) $D_{2n} - D_{1n} = \rho_s$,
+  $\vec{a_n} \cdot (\vec{D_2} - \vec{D_1}) = \rho_s$,
+  $\epsilon_{2n} E_{2n} - \epsilon_{1n} E_{1n} = \rho_s$
+
+- *dielettrici* (componente tangenziale) $E_{2t} = E_{1t}$,
+  $D_{2t} = \dfrac{\epsilon_2}{\epsilon_1} D_{1t}$
+
+- *dielettrici* (componente normale) $D_{2n} = D_{1n}$,
+  $E_{2n} = \dfrac{\epsilon_1}{\epsilon_2} E_{1n}$
+
+- *conduttore e dielettrico* (componente tangenziale) $E_{2t} = 0$,
+  $D_{2t} = 0$
+
+- *conduttore e dielettrico* (componente normale) $D_{2n} = \rho_s$,
+  $E_{2n} = \dfrac{\rho_s}{\epsilon_2}$
+
+** Capacità elettrica
+   :PROPERTIES:
+   :CUSTOM_ID: capacità-elettrica
+   :END:
+
+- Condensatore a facce piane parallele
+  $C = \dfrac{Q}{V} = \dfrac{\epsilon_0 \epsilon_r A}{d}$
+
+- Formula generale
+  $\displaystyle C = \dfrac{Q}{V} = \dfrac{\oint\limits_{S}\vec{D} \cdot \vec{dS}}{-\int\limits_{P_1}^{P_2} \vec{E} \cdot \vec{dl}}$
+
+- Energia immagazzinata in un condensatore
+  $W_e = \dfrac{1}{2} Q V = \dfrac{1}{2} C V^2 = \dfrac{1}{2} \dfrac{Q^2}{C}$
+
+** Corrente elettrica / Legge di Ohm
+   :PROPERTIES:
+   :CUSTOM_ID: corrente-elettrica-legge-di-ohm
+   :END:
+
+- Velocità di deriva $\vec{v_d} = \mu_q \vec{E}$, $\vec{v_d} \| \vec{E}$
+
+- Densità di corrente
+  $\vec{J} = qN \vec{v_d} = qN \mu_q \vec{E} = \sigma \vec{E}$ con
+  $\sigma$ detta conducibilità del mezzo
+
+- In un conduttore ideale, si ha $\mu \rightarrow \infty$,
+  $\sigma \rightarrow \infty$
+
+* Magnetostatica
+  :PROPERTIES:
+  :CUSTOM_ID: magnetostatica
+  :END:
+
+- Legge di Ampere
+  $\displaystyle \oint\limits_{c} \vec{H} \cdot \vec{dl} = \int\limits_{s} \vec{J} \cdot \vec{ds} \leftrightarrow \nabla \times \vec{H} = \vec{J}$
+
+** Campo Magnetico
+   :PROPERTIES:
+   :CUSTOM_ID: campo-magnetico
+   :END:
+
+- Legge di Biot Savart (differenziale)
+  $\vec{dF_{12}} = \dfrac{\mu_0}{4 \pi} \dfrac{I_1 \vec{dl_1} \times [I_2 \vec{dl_2} \times \vec{a_{12}}] }{R^2}$
+
+- Legge di Biot Savart (integrale)
+  $\displaystyle \vec{F_{12}} = \dfrac{\mu_0 I_1 I_2}{4 \pi} \oint\limits_{c_1} \oint\limits_{c_2} \dfrac{\vec{dl_1} \times [\vec{dl_2} \times \vec{a_{12}}]} {R^2} = \dfrac{\mu_0 I_1 I_2}{4 \pi} \oint\limits_{c_1} \oint\limits_{c_2} \dfrac{\vec{a_{12}} \cdot [\vec{dl} \cdot \vec{d2}]} {R^2}$,
+  $\vec{F_{12}} = - \vec{F{21}}$
+
+- Densità di flusso magnetico (differenziale)
+  $\vec{dB} = \dfrac{\mu_0}{4 \pi} \dfrac{I_2 \vec{dl_2} \times \vec{a_{12}}}{R^2}$
+
+- Densità di flusso magnetico (integrale)
+  $\displaystyle \vec{B} = \oint\limits_{c_2} \dfrac{\mu_0}{4 \pi} \dfrac{I_2 \vec{dl_2} \times \vec{a_{12}}}{R^2} = \oint\limits_{c_2} \dfrac{\mu_0}{4 \pi} \dfrac{\vec{J} \cdot ( \vec{dl_{1}} \cdot \vec{dl_2} )}{R^2}$
+
+- Campo magnetico $\vec{H} = \dfrac{\vec{B}}{\mu_0}$
+
+- Autoinduttanza magnetica
+  $\displaystyle L_{11} = \dfrac{\Phi{11}}{I_1} = \dfrac{\displaystyle  \int_{S_1} \vec{B_1} \cdot \vec{dd_1}}{I_1}$
+  con
+  $\vec{B_1} = \dfrac{\mu I_1}{4 \pi} \displaystyle \oint\limits_{c1} \dfrac{\vec{dl} \cdot \vec{ar}}{R^2}$,
+  $\displaystyle \Phi_{m, 11} = \dfrac{\mu I_1}{4 \pi} \int\limits_{s_1} \left( \oint\limits_{c1} \dfrac{\vec{dl} \cdot \vec{a_r}}{R^2} \right) ds \linebreak \Rightarrow L_{11} = \dfrac{\mu}{4 \pi} \displaystyle\int\limits_{s_1} \left(\displaystyle  \oint\limits_{c_1} \dfrac{\vec{dl} \times \vec{a_r}}{R^2} \right) \cdot \vec{ds}$
+
+- Mutua induttanza
+  $\displaystyle L_{21} = \dfrac{\mu}{4 \pi} \int\limits_{s_2} \left( \int\limits_{c_1} \dfrac{\vec{dl} \times \vec{a_r}}{R^2} \right) \cdot \vec{ds}$
+
+- Energia del sistema $W_m = \dfrac{1}{2} L_{11} I_1^2$
+
+- Densità di energia
+  $w_m = \dfrac{1}{2} \vec{B} \cdot \vec{H} = \dfrac{1}{2} \mu H^2$
+
+*** Campo Magnetico nei materiali
+    :PROPERTIES:
+    :CUSTOM_ID: campo-magnetico-nei-materiali
+    :END:
+
+- Momento di dipolo magnetico $\vec{m} = A \cdot I \cdot \vec{a_n}$
+
+- Densità di momento magnetico
+
+  - Mezzo qualsiasi
+    $\vec{M} = \lim\limits_{\Delta\Omega \rightarrow 0} \dfrac{\sum_i \vec{m_i}}{\Delta\Omega}$
+
+  - Se il mezzo è lineare $\vec{M} = \chi_m \vec{H}$
+
+  - $\chi_m$ è detta suscettività magnetica
+
+- Permeabilità del mezzo $\mu = \mu_0 \mu_r = \mu_0 (1 + \chi_m)$
+
+- Relazione tra $\vec{H}$ e $\vec{M}$:
+  $\vec{B} = \mu \vec{H} = \mu_0 \mu_r \vec{H} = \mu_0 (1 + \chi_m) \vec{H} = \mu_0 (\vec{H} + \vec{M})$
+
+*** Interfaccia tra due mezzi
+    :PROPERTIES:
+    :CUSTOM_ID: interfaccia-tra-due-mezzi-1
+    :END:
+
+- Componente tangenziale $H_{2t} - H_{1t} = J_{sn}$,
+  $\dfrac{J_{2t}}{\sigma_2} = \dfrac{J_{1t}}{\sigma_1}$
+
+- Componente normale $H_{2n} = \dfrac{\mu_1}{\mu_2} H_{1n}$,
+  $B_{2n} = B_{1n}$,
+  $\vec{a_n} \cdot \left(\vec{B_2} - \vec{B_1} \right) = 0$,
+  $\rho_s = \left( \epsilon_2 - \epsilon_1 \dfrac{\sigma_2}{\sigma_1} \right) E_{2n}$
+
+- Densità superficiale di carica
+  $\rho_s = \left( \epsilon_1 - \epsilon_2 \dfrac{\sigma_1}{\sigma_2} \right) E_{1n}$
+
+** Resistenza elettrica / Legge di Joule
+   :PROPERTIES:
+   :CUSTOM_ID: resistenza-elettrica-legge-di-joule
+   :END:
+
+- Resistenza
+  $\displaystyle  R = \dfrac{V}{I} = \dfrac{\displaystyle-\int_{p_1}^{p_2} \vec{E} \cdot \vec{dl}}{\displaystyle\oint_s \vec{J} \cdot \vec{ds}} = \dfrac{1}{\sigma} \dfrac{\displaystyle\int_{p_1}^{p_2} \vec{E} \cdot \vec{dl}}{\displaystyle \oint_s \vec{E} \cdot \vec{ds}}$
+
+- Relazione tra resitenza e capacità
+  $R \cdot C = \dfrac{\epsilon}{\sigma} \leftrightarrow \dfrac{G}{C} = \dfrac{\sigma}{\epsilon}$
+
+- Legge di Joule (differenziale)
+  $\dfrac{\partial P}{\partial \Omega} = \vec{E} \cdot \vec{J}$ detta
+  anche potenza specifica
+
+- Legge di Joule (integrale)
+  $\displaystyle P = \int\limits_\Omega \vec{E} \cdot \vec{J} \; d\Omega$
+
+* Regime dinamico
+  :PROPERTIES:
+  :CUSTOM_ID: regime-dinamico
+  :END:
+
+- Legge di Faraday
+  $\displaystyle \oint\limits_c \vec{E} \cdot \vec{dl} = - \int\limits_s \dfrac{\partial \vec{B}}{\partial t} \cdot \vec{ds}$
+  se la superficie non cambia nel tempo
+
+- Circuitazione di $\vec{H}$ e corrente di spostamento
+  $\displaystyle \oint\limits_c \vec{H} \cdot \vec{dl} = \int\limits_s \vec{J} \cdot \vec{ds} + \dfrac{d}{dt} \int\limits_s \vec{D} \cdot \vec{ds}$
+
+- Legge di conservazione della carica
+  $\displaystyle \oint\limits_s \vec{J} \cdot \vec{ds} = -\dfrac{d}{dt} \int\limits_\Omega \rho_\Omega \, d\Omega$
+
+** Teorema di Poyinting
+   :PROPERTIES:
+   :CUSTOM_ID: teorema-di-poyinting
+   :END:
+
+- Vettore di Poynting $\vec{S} = \vec{E} \times \vec{H}$
+
+- Vettore di Poyting (dominio dei fasori)
+  $\vec{S} = \dfrac{1}{2} \vec{E} \times \vec{H}^{*}$
+
+- Teorema di Poynting
+  $P_{diss} = \oint\limits_\Sigma \vec{S} \cdot d \,\Sigma$
+
+- Vettore di Poynting associato ad un onda piana
+  $\vec{S_{ist}} = \dfrac{A^2}{\eta_0} \cos^2{(\omega t)} \, \vec{a_z}$,
+  $\vec{S_{ave}} = \dfrac{A^2}{2 \eta_0} \, \vec{a_z}$
+
+- Vettore di Poynting associato ad un onda piana (dominio dei fasori)
+  $\vec{S_{ist}} = \dfrac{1}{2} Re[\vec{E} \times \vec{H}^{*}]$
+
+* Onde Piane
+  :PROPERTIES:
+  :CUSTOM_ID: onde-piane
+  :END:
+
+- Formula generica di un'onda piana uniforme
+  $f(x, t) = A * \cos\left(\omega t + \beta x \right) \vec{u_z}$
+
+- Equazione di Helmoltz (onda piana uniforme senza perdite)
+  $\dfrac{\partial^2 E(z, t)}{\partial t^2} - \mu \epsilon \dfrac{\partial^2 E(z, t)}{\partial z^2} = 0$
+
+- Equazione di Helmoltz (dominio dei fasori)
+  $\nabla^2 \vec{E} = \gamma^2 \vec{E}$
+
+- Lunghezza d'onda nel vuoto
+  $\lambda = \dfrac{2 \pi}{\omega} = \dfrac{c}{f}$
+
+- Lunghezza d'onda nel mezzo
+  $\lambda = \dfrac{c}{f} \dfrac{1}{\sqrt{\mu \epsilon}}$
+
+- Costante di propagazione
+  $\gamma = \sqrt{j\omega\mu (\sigma + j \omega \epsilon) } = \alpha + j \beta$
+  dove:
+
+  - $\alpha = \textnormal{costante di attenuazione} > 0$
+
+  - $\beta = \textnormal{costante di fase} = \dfrac{2 \pi}{\lambda} = 2 \pi \dfrac{f}{c} \sqrt{\epsilon_r \mu_r}$
+
+- Velocità della luce (velocità di propagazione delle onde)
+  $c = \dfrac{1}{\sqrt{\mu \epsilon}} \cong 3 \cdot 10^8$
+
+- Impedenza intrinseca del mezzo
+  $\eta = \dfrac{E^+}{H^+} = \displaystyle \sqrt{\dfrac{j \omega \mu}{\sigma + j \omega \mu}} = \dfrac{j \omega \mu}{\gamma}$
+
+- Impedenza d'onda $Z = \dfrac{E^+ - E^-}{H^+ - H^-}$
+
+- Indice di rifrazione $n = \dfrac{c}{v} = \sqrt{\epsilon_r \mu_r}$
+
+- Densità di potenza trasportata
+  $|S| = \dfrac{1}{2} \dfrac{|\vec{E}|^2}{\eta} = \dfrac{1}{2} |\vec{H}|^2 \eta$
+
+** Polarizzazione
+   :PROPERTIES:
+   :CUSTOM_ID: polarizzazione
+   :END:
+
+- Sia $\vec{E}(x, y, z. t)$ un campo elettrico con componenti in sole
+  $x$ e $z$. Allora, sul piano trasverso ($z = 0$ ) si ottiene:
+
+  - $\vec{E}(z, t) = E_x \cos ( \omega t) \vec{a_x} + E_Y \cos( \omega t + \phi_0) \vec{a_y}$
+
+  - Si distinguono due casi particolari:
+
+    1. $\phi_0 = 0$, $E_x, E_y$ qualsiasi. Allora:
+       $\xi  = \arctan\left(\dfrac{E_y}{E_x}\right)$,
+       $|\vec{E}(0, t)|^2 = (E_x^2 + E_y^2) \cos(\omega t)$
+       *Polarizzazione lineare*
+
+    2. $\phi_0 = \pm \dfrac{\pi}{2}$, $E_x = E_y = E$. Allora:
+       $\xi(t)  = \mp \omega t$, $|\vec{E}|^2 = E^2$ *Polarizzazione
+       circolare*
+
+  - Se la polarizzazione non è né /lineare/ né /circolare/, allora viene
+    detta *ellittica*.
+
+** Incidenza delle onde
+   :PROPERTIES:
+   :CUSTOM_ID: incidenza-delle-onde
+   :END:
+
+Leggi di Snell:
+
+- Angolo di rifrazione $n_1 \sin(\theta_1) = n_2 \sin(\theta_2)$
+
+- Riflessione interna totale
+  $\theta_{\textnormal{crit}} = \arcsin\left( \dfrac{n_2}{n_1} \right)$
+  e in questa condizione $\Gamma = 1$, $T = 2$
+
+- Angolo di incidenza $=$ angolo di riflessione
+
+*** Incidenza normale su discontinuità piana
+    :PROPERTIES:
+    :CUSTOM_ID: incidenza-normale-su-discontinuità-piana
+    :END:
+
+Mezzi ideali e senza perdite, onda elettromagnetica con componenti in
+$x$ e $y$ nella sezione $z = cost$
+
+- Coefficiente di riflessione $\Gamma = \Gamma(0) \exp(2 j \beta z)$,
+  dove $\Gamma(0) = \dfrac{n_2 - n_1}{n_2 + n_1}$,
+  $| \Gamma(0) | \leq 1$
+
+- Coefficiente di trasmissione $T = T(0) \exp(2 j \beta z)$, dove
+  $T(0) = \dfrac{2 n_2}{n_2 + n_1} = 1 + \Gamma(0)$, $| T(0) | \leq 2$
+
+- Onda riflessa $E_1^-(0) =  E_1^+(0) \cdot \Gamma (0)$
+
+- Onda trasmessa $E_2^+(0) =  E_1^+(0) \cdot T (0)$
+
+- Impedenza d'onda
+  $Z(z) = \eta_1 \left(\dfrac{1 + \Gamma(z)}{1 - \Gamma(z)}\right)$
+
+*** Incidenza non normale
+    :PROPERTIES:
+    :CUSTOM_ID: incidenza-non-normale
+    :END:
+
+*Ipotesi:* onda su piano $xz$ /destrorso/ (asse $x$ verticale, asse $z$
+orizzontale). Può essere scomposta in componente TE e TM (per
+sovrapposizione lineare).
+
+- L'angolo di incidenza sarà
+  $\theta = \arctan\left(\dfrac{\beta_z}{\beta_x}\right)$
+
+- L'angolo di riflessione sarà calcolabile tramite legge di /Snell/
+
+- Le componenti TE e TM possono essere dedotte usando la /regola della
+  mano destra/
+
+- $\beta = \displaystyle \sqrt{\beta_{1x} ^ 2 + \beta_{1z} ^2} \rightarrow f = \dfrac{\beta c}{2 \pi}, \omega = c \beta$
+
+- Componente TE
+
+  - Ha componente $y$
+
+  - Impedenza $\displaystyle \eta^{TE}_n = \dfrac{\eta}{cos(\theta_n)}$
+
+  - Coefficiente di riflessione
+    $\displaystyle \Gamma = \dfrac{\eta_{2}^{TE} - \eta_{1}^{TE}}{\eta_{2}^{TE} + \eta_{1}^{TE}}$
+
+- Componente TM
+
+  - Ha componenti $xz$
+
+  - Impedenza $\displaystyle \eta^{TM}_n = \eta \cdot cos(\theta_n)$
+
+  - Coefficiente di riflessione
+    $\displaystyle \Gamma = - \dfrac{\eta_{2}^{TM} - \eta_{1}^{TM}}{\eta_{2}^{TM} + \eta_{1}^{TM}}$
+
+- Angolo di incidenza
+  $\theta = \arctan\left( \dfrac{\beta_z}{\beta_x} \right)$
+
+- La costante di propagazione $\gamma \rightarrow$ va proiettata nelle
+  direzioni $x$ e $y$ tramite $\sin$ e $\cos$
+
+- $\alpha$ va calcolato come segue:
+
+  1. $\beta_{1z} = \beta \cos(\theta_i) \rightarrow \beta = \dfrac{\beta_{1z}}{\cos(\theta_i)}$
+
+  2. $\beta_{2z} = \dfrac{\beta}{\sqrt{\epsilon_2}} \cos(\theta_t)$
+
+  3. La parte reale di $\beta$ sarà pari al coefficiente di
+     attenuazione, espresso in $m^-1$
+
+  4. Bisogna fare una scelta di segno della radice coerente con la
+     fisica $\alpha < 0$
+
+*EMPIRICAMENTE* l'angolo di incidenza sul piano $xy$ è dato da
+$\theta = \arctan \left( - \dfrac{x}{y} \right)$, la componente $x$ è la
+proiezione tramite $\sin\theta$ ed è *negativa.* La componente $y$ è
+proiettata tramite $\cos\theta$ ed è *positiva.*
+
+*** Trasmissione totale
+    :PROPERTIES:
+    :CUSTOM_ID: trasmissione-totale
+    :END:
+
+- Indice di rifrazione $\Gamma = 0 \leftrightarrow Z_L = Z_{in}$
+
+- Angolo di Brewster
+  $\theta_P = \arcsin\left(\sqrt{\dfrac{\epsilon_2}{\epsilon_1 + \epsilon_2}}\right) = \arctan\dfrac{n_2}{n_1}$
+
+** Mezzi attraversati dalle onde
+   :PROPERTIES:
+   :CUSTOM_ID: mezzi-attraversati-dalle-onde
+   :END:
+
+*** Mezzo senza perdite
+    :PROPERTIES:
+    :CUSTOM_ID: mezzo-senza-perdite
+    :END:
+
+- $\sigma = 0 \Rightarrow \gamma = j \omega \sqrt{\mu \epsilon} \Rightarrow \alpha = 0, \beta = \omega \sqrt{\mu \epsilon}$
+
+- $\eta = \sqrt{\dfrac{\mu}{\epsilon}}  = 377 \, \Omega$
+
+- $v = \dfrac{1}{\sqrt{\mu \epsilon}} = c \cong 3\times10^8 \, m/s$
+
+- $\lambda = \dfrac{v}{f}$
+
+- Impedenza intrinseca del vuoto (dominio dei fasori)
+  $\dfrac{\vec{E^+}}{\vec{H^+}} = \dfrac{j \omega \mu}{\gamma} = \eta$,
+  $\dfrac{\vec{E^-}}{\vec{H^-}} = - \dfrac{j \omega \mu}{\gamma} = - \eta$
+
+*** Buon conduttore
+    :PROPERTIES:
+    :CUSTOM_ID: buon-conduttore
+    :END:
+
+- $\sigma >> \omega \epsilon \Rightarrow \gamma = \sqrt{-\omega^2 \mu \epsilon}$
+
+- $\eta = \dfrac{1+j}{\sqrt{2}} \sqrt{\dfrac{\pi f \mu}{\sigma}} \Rightarrow \alpha \cong \beta
+      \cong \sqrt{\dfrac{\omega \mu \sigma}{2}}$
+
+- $\displaystyle v \cong \dfrac{\omega}{\beta} \cong \sqrt{\dfrac{2 \omega}{\mu \sigma}}$
+
+- $\lambda = 2 \pi \delta = \dfrac{v}{f}$
+
+- Spessore pelle
+  $\delta = \dfrac{1}{\alpha} = \dfrac{1}{\displaystyle \sqrt{\pi f \mu \sigma}}$
+
+- Costante dielettrica
+  $\epsilon = \epsilon ^ { ' } + j \epsilon ^ { '' }$
+
+- Costante di permeabilità magnetica
+  $\mu = \mu ^ { ' } + j \mu ^ { '' }$
+
+- Tangente di perdita
+  $\tan(\delta) = \dfrac{\epsilon^ { " }}{\epsilon^ {'} }$ *Non è lo
+  spessore pelle*
+
+* Linee di trasmissione
+  :PROPERTIES:
+  :CUSTOM_ID: linee-di-trasmissione
+  :END:
+
+- Coefficiente di riflessione
+  $\Gamma(l) = \dfrac{Z_2 - Z_1}{Z_2 + Z_1} e^{-j 2 \beta l}$
+
+- Velocità di fase $v_f = \dfrac{1}{\displaystyle\sqrt{L C}}$
+
+** Linee TEM
+   :PROPERTIES:
+   :CUSTOM_ID: linee-tem
+   :END:
+
+- Equazione 1
+  $\dfrac{\partial V(z, t)}{\partial z} = - \dfrac{\partial I(z, t)}{\partial z} \cdot L$
+  con $L =$ induttanza per unità di lunghezza
+
+- Equazione 2
+  $\dfrac{\partial I(z, t)}{\partial z} = - \dfrac{\partial V(z, t)}{\partial z} \cdot C$
+  con $C =$ capacità per unità di lunghezza
+
+- Uguaglianze $\dfrac{G}{C} = \dfrac{\sigma}{\epsilon}$,
+  $L C = \mu \epsilon$
+
+- Impedenza $Z = \sqrt{\dfrac{L}{C}}$
+
+- Velocità di fase nel conduttore $v = \dfrac{1}{\sqrt{LC}}$
+
+*** Potenza ed energia in una linea
+    :PROPERTIES:
+    :CUSTOM_ID: potenza-ed-energia-in-una-linea
+    :END:
+
+- Potenza disponibile $P_D = \dfrac{|V_g|^2}{8 R_g} = P_D$
+
+- Potenza sul carico
+  $P_L = P_D ( 1 - | \Gamma_L | ^ 2 ) = \dfrac{|V_g|^2}{8 R_g} P_D ( 1 - | \Gamma_L | ^ 2 )$
+
+- Potenza sul carico (in funzione della tensione)
+  $P_L = \dfrac{1}{2} |V|^2  \operatorname{Re}(Y)$
+
+- Potenza sul carico (in funzione della corrente)
+  $P_L = \dfrac{1}{2} |I|^2  \operatorname{Re}(Z)$
+
+- Densità di energia trasmessa
+  $S_{tra} = S_{inc} \left( 1 - \left|\Gamma \right| ^ 2 \right)$
+
+*** Corrente e tensione in una linea non attenuativa
+    :PROPERTIES:
+    :CUSTOM_ID: corrente-e-tensione-in-una-linea-non-attenuativa
+    :END:
+
+- Tensione $|V_L| = \left| V^+(0) \right| \left|1 + \Gamma_L \right|$
+
+- Corrente $|I_L| = \left| I^+(0) \right| \left|1 - \Gamma_L \right|$
+
+*** Cavo coassiale
+    :PROPERTIES:
+    :CUSTOM_ID: cavo-coassiale
+    :END:
+
+*Ipotesi:* $a =$ raggio interno, $b =$ raggio esterno
+
+- Capacità per unità di lunghezza
+  $C = \dfrac{2 \pi \epsilon}{\ln\left(\dfrac{b}{a}\right)}$ con
+  $\epsilon = \epsilon_0 \epsilon_r$
+
+- Induttanza per unità di lunghezza
+  $L = \dfrac{\mu_0}{2 \pi} \ln\left(\dfrac{b}{a}\right)$
+
+- Attenuazione conduttore
+  $\alpha_c = \dfrac{R}{2 Z_C} \; \left[\dfrac{Np}{m}\right]$
+
+- Attenuazione dielettrico
+  $\alpha_d = \dfrac{G Z_C}{2} = \dfrac{\pi}{\lambda}\dfrac{\epsilon"}{\epsilon'} \; \left[\dfrac{Np}{m}\right]$
+
+- Impedenza
+  $Z_C = \sqrt{\dfrac{L}{C}} = \dfrac{\eta}{2 \pi} \ln\left(\dfrac{b}{a} \right) =  \dfrac{1}{2 \pi} \sqrt{\dfrac{\mu}{\epsilon}} \ln\left(\dfrac{b}{a}\right)$
+
+- Resistenza per unità di lunghezza
+  $R = \dfrac{R_s}{2 \pi} \left( \dfrac{1}{a} + \dfrac{1}{b} \right)$
+
+- Resistenza superficiale
+  $R_s = \sqrt{\dfrac{\pi f \mu}{\sigma}} = \sqrt{\dfrac{\omega \mu}{2 \sigma}} = \dfrac{1}{\sigma \delta}$
+
+- Conduttanza per unità di lunghezza
+  $G = C \dfrac{\omega\epsilon"}{\epsilon'} = \dfrac{2 \pi \omega \epsilon"}{\ln\left(\dfrac{b}{a} \right)}$
+
+- Campo elettrico nel conduttore
+  $E_r = \dfrac{|V|}{\ln \left( \dfrac{a}{b}\right)} \dfrac{1}{r}$
+
+Nel caso di un conduttore diviso in /spicchi/ pieni di dielettrici
+diversi, /divido/ per la frazione di spicchio la /capacità/ e
+/moltiplico/ per la frazione di spicchio la /conduttanza/. Per
+/attenuazione specifica/ si intende la /somma/ delle attenuazioni del
+/dielettrico/ ed del /conduttore/.
+
+*** Linea a conduttori piani paralleli
+    :PROPERTIES:
+    :CUSTOM_ID: linea-a-conduttori-piani-paralleli
+    :END:
+
+- Capacità $C = \epsilon \dfrac{w}{h}$
+
+- Capacità per unità di lunghezza $C = \epsilon \dfrac{w}{h} \cdot l$
+
+- Induttanza $L = \mu \dfrac{h}{w}$
+
+- Induttanza per unità di lunghezza $L = \mu \dfrac{h}{w} \cdot l$
+  *tuttavia normalmente si calcola come* $L = \dfrac{\mu \epsilon}{C}$
+
+- Impedenza
+  $Z = \sqrt{\dfrac{L}{C}} = \sqrt{\dfrac{\mu}{\epsilon}} \dfrac{h}{W} = \dfrac{\sqrt{\mu \epsilon}}{C}$
+
+- Attenuazione nel conduttore
+  $\alpha_c = \dfrac{R}{2 Z_C} = \dfrac{1}{W Z_c \sigma_C \delta}$
+
+- Attenuazione dovuta nel dielettrico $\alpha_d = \dfrac{g}{2 Y_c}$
+
+- Ammettenza per unità di lunghezza
+  $g = \sigma_d \dfrac{\textnormal{Area}}{h}$
+
+- Potenza trasportata $P = \dfrac{|E_0|^2 a b}{4 \cdot Z}$
+
+*** Linea Bifilare
+    :PROPERTIES:
+    :CUSTOM_ID: linea-bifilare
+    :END:
+
+*Ipotesi:* $R^+$, $R^-$ raggi dei due conduttori, $d$ distanza tra gli
+stessi, approssimazione conduttori sottili
+
+- Tensione
+  $V = \dfrac{\rho l}{2 \pi \epsilon} \ln \left( \dfrac{d^2}{R^+ \cdot R^-}\right)$
+
+- Capacità per unità di lunghezza
+  $C = \dfrac{2 \pi \epsilon}{\ln \left( \dfrac{d^2}{R^+ \cdot R^-}\right)}$
+
+- Impedenza
+  $Z = \dfrac{\sqrt{\mu \epsilon}}{c} = \sqrt{\dfrac{\mu}{\epsilon}} \dfrac{1}{\pi} \ln \left( \dfrac{d}{R} \right)$
+
+** Linee quasi TEM - dielettrico non omogeneo
+   :PROPERTIES:
+   :CUSTOM_ID: linee-quasi-tem---dielettrico-non-omogeneo
+   :END:
+
+Esempio di una linea quasi TEM: microstriscia
+
+- Costante dielettrica efficace $\epsilon_{eff} = \dfrac{LC}{\mu_0}$
+
+- Pulsazione di taglio
+  $\omega_c = \dfrac{1}{\sqrt{\omega \epsilon}} \sqrt{\left( \dfrac{m \pi}{a}\right)^2 + \left( \dfrac{m \pi}{b} \right)^2 }$
+  con $a$, $b$ interi
+
+- Impedenza modale
+  $Z_{te} = \dfrac{\eta}{\sqrt{1-\left(\dfrac{\omega_c}{\omega} \right) }} = \dfrac{\eta}{\sqrt{1-\left(\dfrac{f_c}{f} \right) }}$
+
+- Frequenza di taglio $f_c = \dfrac{1}{2a \sqrt{\mu \epsilon}}$
+
+- Velocità di gruppo
+  $v_g = v \sqrt{1- \left( \dfrac{\omega_c}{\omega} ^ 2 \right)}$
+
+- Lunghezza d'onda di gruppo
+  $\lambda_g = \dfrac{\lambda}{\sqrt{1- \left( \dfrac{\omega_c}{\omega} ^ 2 \right)}}$
+
+- Coefficiente di attenuazione
+  $\alpha = \dfrac{2 \pi}{\lambda_c} \sqrt{1 - \left( \dfrac{f}{f_c} \right) ^ 2}$
+
+** Modi TE/TM nella guida d'onda rettangolare
+   :PROPERTIES:
+   :CUSTOM_ID: modi-tetm-nella-guida-donda-rettangolare
+   :END:
+
+Sia $a$ il lato della guida che giace sull'asse $x$ /(larghezza)/ e sia
+$b$ il lato della guida che giace sull'asse $y$ /(altezza)/. Allora le
+ampiezze e le frequenze di taglio dei modi $TM_{mn}$ sono:
+
+|Sc|Sc|Sc| Modo & Lunghezza di taglio & Frequenza di taglio\\
+$TE_{10} / TM_{10}$ & $\lambda_c = 2a$ & $f_c = \dfrac{c}{2a}$\\
+$TE_{01} / TM_{01}$ & $\lambda_c = 2b$ & $f_c = \dfrac{c}{2b}$\\
+$TE_{20} / TM_{20}$ & $\lambda_c = a$ & $f_c = \dfrac{c}{a}$\\
+$TE_{02} / TM_{02}$ & $\lambda_c = b$ & $f_c = \dfrac{c}{b}$\\
+
+- $TE_{10}$ è detto modo fondamentale e la sua frequenza minima è detta
+  /frequenza di taglio/
+
+- Banda monomodale massima: banda minima compresa tra le frequenze
+  minime di $TE_{10}$ e $TE_{20}$
+
+- Potenza trasportata $P = \dfrac{|E_0|^2 a b}{4 \cdot Z}$
+
+* Adattamento di impedenza
+  :PROPERTIES:
+  :CUSTOM_ID: adattamento-di-impedenza
+  :END:
+
+L'obiettivo dell'adattamento di impedenza è portare la massima potenza
+disponibile sul carico $P_L = P_D$ annullando quindi il coefficiente di
+riflessione $(\Gamma = 0)$.
+
+** Strutture adattanti
+   :PROPERTIES:
+   :CUSTOM_ID: strutture-adattanti
+   :END:
+
+Esistono 3 tipologie di strutture adattanti: 
+
+- Trasformatore $\dfrac{\lambda}{4}$ - solo per carichi *reali*
+
+- Stub semplice - per carichi *reali* o *complessi*
+
+- Stub doppio - per carichi *reali* o *complessi*
+
+*** Trasformatore lambda-quarti
+    :PROPERTIES:
+    :CUSTOM_ID: trasformatore-lambda-quarti
+    :END:
+
+Funziona esclusivamente con carichi reali. È costituito da un pezzo di
+conduttore lungo un quarto della lunghezza d'onda $\lambda$. Impedenza
+del trasformatore: $\displaystyle  Z_x = \sqrt{Z_{in} \cdot Z_L}$ con
+$Z_{in}$ impedenza di ingresso e $Z_L$ impedenza di carico.
+
+*** Trasformatore lambda-quarti con neutralizzazione
+    :PROPERTIES:
+    :CUSTOM_ID: trasformatore-lambda-quarti-con-neutralizzazione
+    :END:
+
+Risolve il problema dell'impossibilità dei trasformatori lambda-quarti
+di adattare carichi complessi. È composto da un tratto di
+neutralizzazione lungo $l_n$ e da un trasformatore lambda-quarti di
+impedenza $Z_x$. Il tratto di neutralizzazione sarà necessario a
+trasformare in impedenza puramente reale il carico. Il trasformatore
+lambda-quarti adatterà l'impedenza al valore caratteristico.
+
+Operativamente, si dovrà:
+
+1. Normalizzare l'impedenza del carico $Z_L$ all'impedenza
+   caratteristica $Z_C$ ottendendo $\overline{Z_L}$
+
+2. Tracciare la circonferenza con centro in $1$ e passante per
+   $\overline{Z_L}$
+
+3. Partendo da $\overline{Z_L}$, ruotare in senso orario sulla
+   circonferenza appena tracciata fino ad intersecare l'asse reale nel
+   punto $A$
+
+4. Il valore di $l_n$, normalizzato alla lunghezza d'onda $\lambda$,
+   sarà letto come differenza tra il prolungamento del punto $A$ sulla
+   scala esterna della carta di Smith e medesimo prolungamento di
+   $\overline{Z_L}$
+
+5. Denormalizzare $\overline{Z_L}$ per ottenere $Z_L$
+
+6. Il valore dell'impedenza del trasformatore sarà data da
+   $\displaystyle Z_x = \sqrt{Z_{in} \cdot Z_L}$
+
+*** Stub semplice
+    :PROPERTIES:
+    :CUSTOM_ID: stub-semplice
+    :END:
+
+Detto anche stub /singolo/, è realizzato con un tratto di linea di
+trasmissione in /c.c/. o in /c.a/ di lunghezza $l_s$, opportunamente
+collegato in serie o in parallelo alla linea ad un tratto di distanza
+$d_s$ dal carico. Esistono due tipi di stub semplice:
+
+1. Stub parallelo - si lavora con le ammettenze
+   $\overline{Y_L} = \dfrac{Y_L}{Y_C} = \dfrac{Z_C}{Z_L}$
+
+2. Stub serie - si lavora con le impedenze
+   $\overline{Z_L} = \dfrac{Z_L}{Z_C}$
+
+Si può cercare $l_s$ in modo che dia origine ad un /corto circuito/ o a
+un /circuito aperto/, mentre $d_s$ potrà assumere un solo valore.
+
+1. Il /circuito aperto/ si troverà a destra dell'asse reale della carta
+   di Smith
+
+2. Il /corto circuito/ si troverà a sinistra dell'asse reale della carta
+   di Smith
+
+La differenza tra stub in /circuito aperto/ e in /corto circuito/ sarà
+pari a mezzo giro sulla carta di Smith $( l = \dfrac{\lambda}{4} )$.
+
+Operativamente, per gli stub /serie/ si dovrà:
+
+1. Normalizzare l'impedenza del carico $Z_L$ all'impedenza
+   caratteristica $Z_C$ (o impedenza di ingresso) ottendendo
+   $\overline{Z_L}$
+
+2. Segnare sulla carta di Smith il valore di $\overline{Z_L}$
+
+3. Tracciare la circonferenza a modulo costante pari a $\overline{Z_L}$
+
+4. Partendo da $\overline{Z_L}$, ruotare in senso orario sulla
+   circonferenza appena tracciata fino ad intersecare la circonferenza
+   di raggio $\sfrac{R_g}{Z_C}$ nel generico punto $A$
+
+5. Il valore di $d_s$, normalizzato alla lunghezza d'onda $\lambda$,
+   sarà letto come differenza tra il prolungamento del punto $A$ sulla
+   scala esterna della carta di Smith e medesimo prolungamento di
+   $\overline{Z_L}$
+
+6. Partendo da $A$ si procede ruotando fino a $Z = 0$ (per uno stub
+   c.c.) o $Z = \inf$ (per uno stub c.a.) nel generico punto $B$
+
+7. Analogamente a quanto trovato per $d_s$, la lunghezza dello stub sarà
+   pari alla differenza tra il prolungamento del punto $B$ e medesimo
+   prolungamento di $A$
+
+Il procedimento sarà analogo per gli stub /parallelo/ ma si dovrà
+lavorare con le ammettenze al posto delle impedenze.
+
+*** Stub doppio
+    :PROPERTIES:
+    :CUSTOM_ID: stub-doppio
+    :END:
+
+È una struttura adattante formata da due stub semplici di lunghezza
+$l_1$ e $l_2$ posti a distanza $d_s$ (fissata) tra di loro. I due stub
+possono essere sia collegati in serie che in parallelo
+
+1. La lunghezza del primo stub (il più vicino al carico) è ricercata in
+   modo da eguagliare la parte reale dell'impedenza carico a quella
+   della linea
+
+2. La lunghezza del secondo stub è ricercata in modo da annullare la
+   parte immaginaria dell'impedenza di carico
+
+Operativamente, per gli stub /parallelo/ si dovrà
+
+1. Normalizzare l'ammettenza del carico $Y_L$ all'impedenza
+   caratteristica $Y_C$ (o impedenza di ingresso) ottendendo
+   $\overline{Y_L}$
+
+2. Segnare sulla carta di Smith il valore di $\overline{Y_L}$
+
+3. Tracciare la circonferenza a parte reale costante pari a
+   $\operatorname{Re}(\overline{Y_L})$ /"circonferenza di partenza"/
+
+4. Rutotare la circonferenza di raggio $\sfrac{R_g}{Z_C}$ in senso
+   antiorario di un angolo pari a $d_s$ attorno al suo centro
+   /"circonferenza di arrivo"/
+
+5. Si trovano quindi 2 intersezioni tra la due circonferenze ed è
+   necessario sceglierne uno /"punto di partenza" $A$/
+
+6. Tracciare la circonferenza con centro in $1$ e passante per $A$ e
+   ruotare di una lunghezza pari a $d_s$ fino ad arrivare al /"punto di
+   arrivo" $B$/
+
+7. Calcolare le ammettenze dei due stub $Y_{S1} = A - \overline{Y_L}$ e
+   $Y_{S2} = -\operatorname{Im}(B)$
+
+8. Le lunghezze dei due stub saranno quelle che portano i loro
+   rispettivi valori di ammettenza tale da avere un c.c. $Y = \inf$ o un
+   c.a. $Y = 0$, dipendentemente dalla struttura che si sta cercando di
+   realizzare
+
+Il procedimento sarà analogo per gli stub /serie/ ma si dovrà lavorare
+con le impedenze al posto delle ammettenze. *Nota:* generalmente $d_s$ è
+un dato del problema.
+
+** Linea attenuativa
+   :PROPERTIES:
+   :CUSTOM_ID: linea-attenuativa
+   :END:
+
+Per calcolare l'impedenza ad una certa distanza $l$ dal carico di una
+linea attenuativa, bisogna
+
+1.  Assicurarsi che il valore di $\alpha$ sia espresso in
+    $\sfrac{N_p}{m}$
+
+2.  Normalizzare l'impedenza del carico $Z_L$ all'impedenza
+    caratteristica $Z_C$ (o impedenza di ingresso) ottendendo
+    $\overline{Z_L}$
+
+3.  Tracciare la circonferenza con centro in $1$ e passante per
+    $\overline{Z_L}$
+
+4.  Partendo da $\overline{Z_L}$, ruotare in senso orario sulla
+    circonferenza appena tracciata fino a percorrere una lunghezza
+    normalizzata alla lunghezza d'onda pari alla lunghezza della linea
+
+5.  Tracciare un segmento che congiunga il centro della carta di Smith
+    con il punto appena trovato
+
+6.  Calcolare il modulo del coefficiente di riflessione $\Gamma$ in
+    corrispondenza del carico e riportarlo in corrispondenza del
+    generatore moltiplicandolo per un fattore $\;e^{-2 \alpha l}$
+
+7.  Misurare sulla scala lineare più esterna della carta di Smith (con
+    la dicitura /TRASM. COEFF./) una lunghezza $l_\alpha$ pari al valore
+    appena trovato
+
+8.  L'impedenza attenuata dalla linea (normalizzata)
+    $\displaystyle \overline{Z_{L_{att}}}$ sarà trovata sul segmento
+    prima tracciato, a distanza $l_\alpha$ dal centro
+
+9.  Denormalizzare il valore appena trovato per calcolare il valore
+    effettivo di $Z_{L_{att}}$
+
+10. Calcolare il nuovo coefficiente di riflessione $\Gamma$ tra
+    impedenza del generatore $Z_g$ e impedenza attenuata del carico
+    $Z_{L_{att}}$
+
+** Potenza, tensione e corrente in una linea adattata
+   :PROPERTIES:
+   :CUSTOM_ID: potenza-tensione-e-corrente-in-una-linea-adattata
+   :END:
+
+- Potenza al carico $P_L = P_D = \dfrac{|V_g|^2}{8 R_g}$
+
+- La potenza disponibile è uguale in qualsiasi punto della linea
+
+- Al carico
+  $V_{BB} = V_{AA}^+ \left( e ^ {\gamma l} + \Gamma_{AA} e^{-\gamma l} \right)$
+  con $\gamma = \alpha + j \beta$
+
+- Al generatore $V_{AA} = V_{AA}^+ \left( 1 + \Gamma_{AA} \right)$
+
+*** Tensione e corrente in uno stub c.c.
+    :PROPERTIES:
+    :CUSTOM_ID: tensione-e-corrente-in-uno-stub-c.c.
+    :END:
+
+- Tensione $|V(d)| = \left| V_g \right| \left|\sin(\beta d)\right|$
+
+- Corrente $|I(d)| = \dfrac{|V_g|}{Z_C} |\cos (\beta d) |$
+
+- Massimo di tensione localizzato a $l_s = \dfrac{\lambda}{4}$ dal
+  /c.c./
+
+*** Tensione e corrente in uno stub c.a.
+    :PROPERTIES:
+    :CUSTOM_ID: tensione-e-corrente-in-uno-stub-c.a.
+    :END:
+
+- Tensione $|V(d)| = \left|V_g\right| \cos(\beta d)$
+
+- Corrente $|I(d)| = \dfrac{\left|V_g\right|}{Z_C} \cos(\beta d)$
+
+- Massimo di corrente localizzato a $l_s =  \dfrac{\lambda}{4}$ dal
+  /c.a./
+
+** Note sulla Carta di Smith
+   :PROPERTIES:
+   :CUSTOM_ID: note-sulla-carta-di-smith
+   :END:
+
+- Ruotare in senso orario corrisponde ad una direzione verso il carico
+  (allontanandosi quindi dal generatore)
+
+- La carta di Smith può essere usata indifferentemente con impedenze e
+  ammettenze
+
+- Ogni tacca sulla circonferenza esterna corrisponde a
+  $\dfrac{1}{500} = 0.002$ di lambda
+
+- 1 giro completo della carta corrisponde a $0.5 \lambda$. Altri valori
+  tipici:
+
+  |Sc|Sc|Sc| /Lunghezza/ & /Frazione/ & /Rotazione/\\
+  $0.125 \lambda$ & $\dfrac{\lambda}{8}$ & $90^\circ$\\
+  $0.1\overline{6} \lambda$ & $\dfrac{\lambda}{6}$ & $120^\circ$\\
+  $0.25 \lambda$ & $\dfrac{\lambda}{4}$ & $180^\circ$\\
+  $0.\overline{3} \lambda$ & $\dfrac{\lambda}{3}$ &$240^\circ$\\
+  $0.5 \lambda$ & $\dfrac{\lambda}{2}$ & $360^\circ$\\
+
+* Antenne
+  :PROPERTIES:
+  :CUSTOM_ID: antenne
+  :END:
+
+- Direttività
+  $\displaystyle D = \dfrac{4 \pi}{\int{f(\theta, \phi) d \Omega}} = \dfrac{S_{max}}{S_{iso}}$
+
+- Area efficace $\displaystyle A_e = \dfrac{|l_e| ^ 2 \eta_0}{4 R}$
+
+- Relazione universale $\dfrac{G}{A_e} = \dfrac{4 \pi}{\lambda^2}$
+
+- Tensione a vuoto
+  $V_0 = l_e \cdot E_{inc} \cdot \sqrt{f_r(\theta, \phi)}$
+
+- Potenza ricevuta
+  $P_R = P_D = S_{inc} \cdot A_e \cdot  f(\theta, \phi)$
+
+- Decibel Anisotropici
+  $dBi = 10 \cdot \log_{10} \left( \dfrac{\textnormal{Potenza ricevuta sull'antenna}}{\textnormal{Potenza ricevuta su un'antenna isotropica}} \right) = 10 \log{10} (G) = G_{dBi}$
+
+- Decibel Dipolo
+  $dBd = 10 \cdot \log_{10} \left( \dfrac{\textnormal{Potenza ricevuta sull'antenna}}{\textnormal{Potenza ricevuta su un dipolo hertziano}} \right) = 10 \log{10} \left( \dfrac{G}{1.64} \right) = G_{dBd}$
+
+- Link Budget
+  $P_R = P \cdot G_{tx} \cdot f_t (\theta_t, \phi_t) \cdot \left( \dfrac{\lambda}{4 \pi R} \right) ^ 2 \cdot G_{rx} \cdot f_r (\theta_r, \phi_r)$
+
+** Dipolo Hertziano
+   :PROPERTIES:
+   :CUSTOM_ID: dipolo-hertziano
+   :END:
+
+- Lunghezza efficace $l_e = l$
+
+- Area efficace $A_e = \dfrac{3}{8} \dfrac{\lambda^2}{\pi}$
+
+- Funzione di direttività $f(\theta, \phi) = \sin^2(\theta)$
+
+- Tensione a vuoto $V_0 = l_e \cdot E_{inc}$
+
+- Resistenza di radiazione
+  $R_R = \dfrac{2}{3} \pi \eta_0 \left( \dfrac{l}{\lambda} \right) ^ 2$
+
+- Densità di potenza $S = \dfrac{P_t D}{4 \pi R^2} f(\theta, \phi)$
+
+- Potenza trasmessa
+  $P_T = \dfrac{\pi}{3} \eta \left| I \right| ^2 \left(\dfrac{l}{\lambda} \right) ^ 2$
+
+- Campi irradiati (campi lontani)
+
+  - *Ipotesi* $\theta$ colatitudine, $R$ distanza tra punto considerato
+    e centro del dipolo
+
+  - Campo elettrico
+    $E_\theta = \dfrac{j \omega \mu I l}{4 \pi R} e^{-j \beta R} \sin\theta$
+
+  - Campo magnetico
+    $H_\theta = \dfrac{j \omega \mu I l}{4 \pi R \eta} e^{-j \beta R} \sin\theta$
+
+  - $\dfrac{E_\theta}{H_\theta} = \eta$
+
+  - I campi sono diretti come $\overline{u_\theta}$
+
+*** Dipoli Hertziani trasmittenti in gruppo
+    :PROPERTIES:
+    :CUSTOM_ID: dipoli-hertziani-trasmittenti-in-gruppo
+    :END:
+
+*Ipotesi:* $n$ dipoli hertziani distanti $d$ tra di loro,
+unifrequenziali, alimentati in egual modo e di egual lunghezza
+
+- Campo elettrico di Radiazione
+  $E_\theta = \dfrac{j \omega \mu I l}{4 \pi R} e^{-j \beta R} \sin\theta \cdot 2 \cos \left( \beta \dfrac{d}{2} \sin(theta) \right)$
+
+** Spira magnetica
+   :PROPERTIES:
+   :CUSTOM_ID: spira-magnetica
+   :END:
+
+*Ipotesi:* incidenza perpendicolare, adattamento di polarizzazione
+
+- Lunghezza efficace $l_e = l_m \dfrac{Z_{in}}{\eta_0}$
+
+- Funzione di direttività $f(\theta, \phi) = 1$
+
+- Tensione a vuoto $V_0 = j \omega \mu \dfrac{E_{inc}}{\eta_0} S$
+
+- Densità di potenza $S = \dfrac{P_t D}{4 \pi R^2} f(\theta, \phi)$
+
+- Resistenza di radiazione
+  $R_R = \dfrac{|l_e|^2 \eta_0}{4 A_e} = \eta_0 \dfrac{8 \pi^3}{3}\left( \dfrac{S}{\lambda^2} \right) ^ 2$
+  con $S$ superficie della spira.
+
+- Campi irradiati (campi lontani):
+
+  - Campo elettrico
+    $E_\phi = \dfrac{j \omega \mu I S}{4 \pi \eta} \left( \dfrac{j \beta}{r} \right) \sin\theta e^ {-j \beta R}$
+
+  - Campo magnetico
+    $H_\theta = - \dfrac{j \omega \mu I S}{4 \pi} \left( \dfrac{j \beta}{r} \right) \sin\theta e^ {-j \beta R}$
+
+  - I campi sono perpendicolari alla superficie della spira
+
+** Nastro di corrente
+   :PROPERTIES:
+   :CUSTOM_ID: nastro-di-corrente
+   :END:
+
+*Ipotesi:* $l_g =$ lunghezza fisica
+
+- Lunghezza magnetica $l_m = l_g$
+
+- Induttanza $L = \mu_0 \dfrac{S}{l_g}$
+
+** Solenoide
+   :PROPERTIES:
+   :CUSTOM_ID: solenoide
+   :END:
+
+*Ipotesi:* $l_g =$ lunghezza fisica, $N$ spire su $l_g$
+
+- Lunghezza magnetica $l_m = \dfrac{l_g}{N}$
+
+- Induttanza $L = \mu_0 N^2 \dfrac{S^2}{l_g}$
+
+** Confronto tra spira e solenoide
+   :PROPERTIES:
+   :CUSTOM_ID: confronto-tra-spira-e-solenoide
+   :END:
+
+|Sc|Sc|Sc| *in TX* & /Spira/ & /Solenoide/\\
+campo elettrico & $E_0$ & $N \cdot E_0$\\
+campo magnetico & $H_0$ & $N \cdot H_0$\\
+densità di potenza & $S_0 = \dfrac{|E_0|^2}{2 \eta_0}$ &
+$S_0 = \dfrac{|E|^2}{2 \eta_0} = N^2 S_0$\\
+$P_T$ & $P_0$ & $N^2 \cdot P_0$\\
+$R_R$ & $R_{R0}$ & $N^2 \cdot R_{R0}$\\
+
+|Sc|Sc|Sc| *in RX* & /Spira/ & /Solenoide/\\
+tensione a vuoto & $V_0$ & $N \cdot V_0$\\
+potenza disponibile & $P_{D0}$ & $P_{D0}$\\
+
+** Note sugli esercizi
+   :PROPERTIES:
+   :CUSTOM_ID: note-sugli-esercizi
+   :END:
+
+- In presenza di più *spire*, non è valida la relazione
+  $H_{\textnormal{TOT}} = \dfrac{E_{\textnormal{TOT}}}{\eta_0}$ *poiché
+  questa relazione non vale per la sovrapposizione delle onde*
+
+- In questi casi si calcolano i campi magnetici $H$ e poi si sommano i
+  contributi
+
+
