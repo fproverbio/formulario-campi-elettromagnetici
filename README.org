@@ -1,0 +1,19 @@
+#+TITLE: Readme
+
+Un formulario per il corso di Campi Elettromagnetici (professore Michele D'Amico).
+La creazione del formulario è dovuta a [[https://github.com/lorossi/formulario-campi-elettromagnetici][lorossi]], questo repository raccoglie le mie aggiunte ed eventuali modifiche ai file originali.
+
+* Contenuti
+1. *Riguardo al formulario*
+2. *Richiami di base*
+3. *Metodo delle cariche immagine*
+4. *Elettrostatica*
+5. *Magnetostatica*
+6. *Regime dinamico*
+7. *Onde piane*
+8. *Linee di trasmissione*
+9. *Adattamento di impedenza*
+10. *Antenne*
+
+* Licenza
+Il formulario è distribuito con Licenza Creative Commons - Attribuzione Non commerciale 4.0 Internazionale
